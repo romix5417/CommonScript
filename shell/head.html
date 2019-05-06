@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>Status Info</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="../uniStyle.css" type="text/css">
+<script language="JavaScript" src="../javascript.js"></script>
+<script language="JavaScript" src="../javascript1.js"></script>
+</head>
+<body onLoad="MM_callJS('Gett()')">
+<div  class="wndmain">
+<div  align="center">
+  <br>
+  <table border="0" cellspacing="0" align="center" width="800">
+    <tr>
+      <td  width="250" align="right" valign="top" style="padding-top:100px">
+        
+	  </td>
+      <td width="490"  style="text-align:center" >
+		<div align="center"><img src="warngif/ups_online.gif" id='upsimg' width=490 height=274 align="middle"></div></td>
+      <td width="250" valign="top" style="padding-top:100px" >
+	  	
+	  </td>
+    </tr>
+    <tr>
+      <td  colspan="2"  valign="top" style="padding-top:10px">
+	  
+	 </td>
+      <td  valign="top" style="padding-top:10px">
+      
+        </td>
+    </tr>
+  </table>
+  <br>
+  <table width="800" border="0" cellspacing="1"  cellpadding="3" class="listDiv" align="center" >
+     <tr><th colspan="5" style="text-align:left">Device Status&nbsp;&nbsp;</th>
+     </tr>
+    <tr >
+      <td width="24%" class="td_ll1" style="text-align:center">UPS &nbsp;&nbsp;Link &nbsp;&nbsp;&nbsp;&nbsp;<img src="warngif/state1.gif" id="connect" alt="Link OK" style="vertical-align:middle"></td>
+      <td width="24%" class="td_lc1"><span id='state1txt'></span></td>
+	    <td class="td_lc1" width="4%" >&nbsp;</td>
+      <td width="24%" class="td_ll1" style="text-align:center">Run Status&nbsp;&nbsp;<img src="warngif/state2.gif" id="workstat" alt="Inverter" style="vertical-align:middle" ></td>
+      <td class="td_lc1" width="24%"><span id='state2txt'></span></td>
+    </tr>
+    <tr  >
+      <td class="td_ll2" style="text-align:center">Input Status&nbsp;&nbsp;<img src="warngif/state3.gif" id="failstat" style="vertical-align:middle" alt="Input OK"></td>
+      <td class="td_lc2"><span id='state3txt'></span></td>
+	  <td class="td_lc2">&nbsp;</td>
+      <td class="td_ll2" style="text-align:center">Battery Low&nbsp;&nbsp;&nbsp;<img src="warngif/state4.gif" id="batstat" style="vertical-align:middle" alt="BAT OK"></td>
+      <td class="td_lc2"><span id='state4txt'></span></td>
+    </tr>
+    <tr  >
+      <td class="td_ll1" style="text-align:center">Start Status&nbsp;&nbsp;<img src="warngif/state5.gif" id="turnoff" style="vertical-align:middle" alt="Start"> </td>
+      <td class="td_lc1"><span id='state5txt'></span></td>
+	  <td class="td_lc1">&nbsp;</td>
+      <td class="td_ll1" style="text-align:center">Test Status&nbsp;&nbsp;&nbsp;<img src="warngif/state6.gif" id="teststat" style="vertical-align:middle" alt="Test OK">
+      </td>
+      <td class="td_lc1"><span id='state6txt'></span></td>
+    </tr>
+    <tr  >
+      <td class="td_ll2" style="text-align:center">UPS &nbsp;&nbsp;Status&nbsp;<img src="warngif/state7.gif" id="upsstat"  style="vertical-align:middle" alt="UPS OK">
+      </td>
+      <td class="td_lc2">
+<span id='state7txt'></span></td>
+<td class="td_lc2">&nbsp;</td>
+      <td class="td_ll2" style="text-align:center">Beep Status&nbsp;&nbsp;&nbsp;&nbsp;<img src="warngif/state8.gif" id="beepstat" align="middle" alt="Voice open">
+      </td>
+      <td class="td_lc2">
+<span id='state8txt'></span></td>
+    </tr>
+  </table>
+  <br>
+  <table width="800" border="0" cellspacing="1"  cellpadding="3" class="listDiv" align="center" >
+     <tr><th colspan="5" style="text-align:left">&nbsp;Device data</th>
+     </tr>
+    <tr >
+      <td width="24%" class="td_lc1" >Input Voltage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td width="24%" class="td_lc1"><span id='InputVoltage'></span>&nbsp;V</td>
+	  <td class="td_lc1" width="4%" >&nbsp;</td>
+      <td  width="24%" class="td_lc1" >Output Voltage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1" width="24%"><span id='OutputVoltage'></span>&nbsp;V</td>
+    </tr>
+    <tr  >
+      <td class="td_lc2" >Input Frequency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='Frequency'></span>&nbsp;Hz</td>
+	  <td class="td_lc2">&nbsp;</td>
+      <td class="td_lc2" >Load Percentage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='CurrentLoad'></span>&nbsp;%</td>
+    </tr>
+	<tr  >
+      <td class="td_lc1" >Battery Low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='BatteryVoltage'></span>&nbsp;V</td>
+	  <td class="td_lc1">&nbsp;</td>
+      <td class="td_lc1" >Battery capacity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='BatteryCapacity'></span>&nbsp;%</td>
+    </tr>
+	<tr  >
+      <td class="td_lc2" >Discharge Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='DischargeTime'></span></td>
+	  <td class="td_lc2">&nbsp;</td>
+      <td class="td_lc2" >UPS Temperature&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='UPSCTemperature'></span>&nbsp;℃(<span id='UPSFTemperature'></span>&nbsp;F)</td>
+    </tr>
+	<tr  >
+      <td class="td_lc1" >Input Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='InputMinVoltage'></span>&nbsp;V</td>
+	  <td class="td_lc1">&nbsp;</td>
+      <td class="td_lc1" >Output Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='OutputMinVoltage'></span>&nbsp;V</td>
+    </tr>
+	<tr  >                                                                                    
+      <td class="td_lc2" >Input Max&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>                                             
+      <td class="td_lc2"><span id='InputMaxVoltage'></span>&nbsp;V</td>       
+	  <td class="td_lc2">&nbsp;</td>                                                          
+      <td class="td_lc2" >Output Max&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>                                                     
+      <td class="td_lc2"><span id='OutputMaxVoltage'></span>&nbsp;V</td>                     
+    </tr>                                                                                   
+    
+</table>
+<br>
+
+<table width="800" border="0" cellspacing="1"  cellpadding="3" class="listDiv" align="center"  >
+    <th  style="text-align:left"colspan="5">EXT Data</th>
+  <tr>
+    <td class="td_lc2" width="24%"  >Environment Temperature 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="td_lc2" width="24%"  ><span id='EnvironmentTemperature1'></span> ℃</td>
+    <td class="td_lc2" width="4%"  >&nbsp;</td>
+    <td class="td_lc2" width="24%"  >Environment Temperature 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="td_lc2" width="24%"  ><span id='EnvironmentTemperature2'></span> ℃</td>
+  </tr>    
+       
+	<tr  >
+      <td class="td_lc1" >Environment Humidity 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='EnvironmentHumidity1'></span> %</td>
+	  <td class="td_lc1">&nbsp;</td>
+      <td class="td_lc1" >Environment Humidity 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc1"><span id='EnvironmentHumidity2'></span> %</td>
+    </tr>
+	<tr  >
+      <td class="td_lc2" >Environment Dew Point 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='EnvironmentDew1'></span> ℃</td>
+      <td class="td_lc2">&nbsp;</td>
+      <td class="td_lc2" >Environment Dew Point 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="td_lc2"><span id='EnvironmentDew2'></span> ℃</td>
+    </tr>
+	<tr	>                                                              
+      <td class="td_lc1" >Zero Ground Voltage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>                             
+      <td class="td_lc1"><span id='N_Earth_vol'></span>&nbsp;V</td>
+	  	<td class="td_lc1">&nbsp;</td>                                   
+      <td class="td_lc1" ></td>                             
+      <td class="td_lc1"></td>
+    </tr>                                                            
+    
+    
+  </table>
+  <br>
+  <table width="800" border="0" cellspacing="1"  cellpadding="3" class="listDiv" align="center">
+  <tr>
+    <th  style="text-align:left" colspan="5">&nbsp;Rated Info</th>
+  </tr>
+
+  <tr>
+    <td class="td_lc1"  width="24%" >UPS Manufacturer&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc1" width="24%" ></span>&nbsp;</td>
+	<td class="td_lc1" width="4%" >&nbsp;</td>
+    	<td class="td_lc1" width="24%" >UPS Model&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc1" width="24%" ></span>&nbsp;</td>
+  </tr>
+
+<tr >
+    	<td class="td_lc2"  >UPS Software Version&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc2"  ></span>&nbsp;</td>
+	<td class="td_lc2"  >&nbsp;</td>
+	<td class="td_lc2"  >UPS  Serial Number&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc2"  >radar-SN3</span>&nbsp;</td>
+</tr>
+
+<tr >
+	<td class="td_lc1"  >Rated Input&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc1"  ></span>&nbsp;V</td>
+	<td class="td_lc1"  >&nbsp;</td>
+	<td class="td_lc1"  >Rated Battery&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc1"  ></span>&nbsp;V</td>
+</tr>
+
+<tr >
+	<td class="td_lc2"  >Rated Frequency&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc2"  ></span>&nbsp;Hz</td>
+	<td class="td_lc2"  >&nbsp;</td>
+	<td class="td_lc2" >Rated Current&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="td_lc2"  ></span>&nbsp;A</td>
+  </tr>
+
+
+
+
+  
+</table>
+  <br>
+  <div align="center" style="line-height:25px; padding:10px 0 10px 0; text-align:center">
+    <input class="inputButtonNormal" type="button" name="Help" value="HELP" onClick="GoToURLmain('help.htm#CurrRunStatus');">
+  </div>
+<br>
+<br>
+</div>
+</div>
+</body>
+</html>
+

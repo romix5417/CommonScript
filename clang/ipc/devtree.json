@@ -1,0 +1,93 @@
+{
+    "name": "RadarGsp",
+    "firmware": "0.0.1",
+    "hostname": "ETWS",
+
+    "mainboard":{
+        "id": "10001",
+        "name": "x1010",
+
+        "cpu":{
+            "arch": "x86_64",
+            "info": "Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz",
+            "threadx": "0"
+        },
+
+        "system":{
+            "os":"linux",
+            "kernel_ver": "4.9.111",
+            "uptime": ""
+        },
+
+        "memory":{
+            "total":"100",
+            "used":"20",
+            "free":"80",
+            "cache":"0"
+        }
+    },
+
+    "interboard":{
+        "id": "20001",
+        "name": "i2002",
+        "firmware": "0.0.1"
+    },
+
+    "adboard":{
+        "adboard_0":{
+            "name": "x23333",
+            "id": "3001",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_1":{
+            "name": "x23333",
+            "id": "3002",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_2":{
+            "name": "x23333",
+            "id": "3003",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_3":{
+            "name": "x23333",
+            "id": "3004",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_4":{
+            "name": "x23333",
+            "id": "3005",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_5":{
+            "name": "x23333",
+            "id": "3006",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_6":{
+            "name": "x23333",
+            "id": "3007",
+            "firmware":"0.0.3",
+            "state":"0"
+        },
+
+        "adboard_7":{
+            "name": "x23333",
+            "id": "3008",
+            "firmware":"0.0.3",
+            "state":"0"
+        }
+    }
+}

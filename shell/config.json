@@ -1,0 +1,49 @@
+{
+	"DEV": "Radar GateWay",
+	"ID": "1",
+	"IP-Extenal":"22.11.22.33",
+	"IP-MASK":"24",
+	"IP-GateIP":"192.168.8.1",
+	"DevMask":"00000000",
+
+	"module01":{
+		"name": "Power",
+		"mask":"00000000",
+		"function":{
+			"switch":"on",
+			"voltage":"20v",
+			"electricity":"1A"
+		}
+	},
+
+	"module02":{
+		"name": "GateWay",
+		"mask": "00000000",
+		"function":{
+			"IP":"192.168.8.1",
+			"Mac":"aa:bb:cc:dd:ee:ff"
+		}
+	},
+
+	"module03":{
+		"name": "UPS",
+		"mask": "00000000",
+
+		"function":{
+			"IP":"192.168.8.1",
+			"IP-mask":"24",
+			"mac":"aa:bb:cc:dd:ee:ff"
+		}
+	},
+
+	"module04":{
+		"name": "Camera",
+		"mask": "00000000",
+
+		"function":{
+			"IP":"192.168.8.1",
+			"IP-mask":"24",
+			"mac":"aa:bb:cc:dd:ee:ff"
+		}
+	}
+}
